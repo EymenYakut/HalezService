@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HalezService.Shared.Base
 {
-    public class EntityBase
+    public abstract class EntityBase
     {
         public int Id { get; set; }
         public int CreatedBy { get; set; }

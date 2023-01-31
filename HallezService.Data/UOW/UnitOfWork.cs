@@ -1,4 +1,6 @@
-﻿using HallezService.Data.Context;
+﻿using HalezService.Entities;
+using HallezService.Data.Context;
+using HallezService.Data.Respositories;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -42,10 +44,10 @@ namespace HallezService.Data.UOW
         }
 
         #region Private
-        //private IGenericRepository<Customer> _customers { get; set; }
+        private IGenericRepository<User> _users { get; set; }
         #endregion
 
-        //public IGenericRepository<Customer> Customers => _customers ?? new GenericRepository<Customer>(_dataContext);
+        public IGenericRepository<User> Customers => _users ?? new GenericRepository<User>(_dataContext);
 
     }
 }

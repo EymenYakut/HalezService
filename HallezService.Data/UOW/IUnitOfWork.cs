@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HalezService.Entities;
+using HallezService.Data.Respositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,7 @@ namespace HallezService.Data.UOW
 {
     public interface IUnitOfWork
     {
-        //IGenericRepository<Customer> Customers { get; }
+        IGenericRepository<User> Customers { get; }
 
         int SaveChanges();
         void BeginTransaction();
