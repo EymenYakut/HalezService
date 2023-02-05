@@ -12,6 +12,7 @@ namespace HalezService.Entities
         public string Surname { get; set; }
         public string Adress { get; set; }
         public string Mail { get; set; }
-
+        public string Number { get; set; } 
+ 
     }
 }
