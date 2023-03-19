@@ -10,7 +10,9 @@ namespace HallezService.Data.UOW
 {
     public interface IUnitOfWork
     {
-        IGenericRepository<User> Customers { get; }
+        IGenericRepository<User> Users { get; }
+        IGenericRepository<ProductCategory> ProductCategories { get; }
+
 
         int SaveChanges();
         void BeginTransaction();

@@ -12,10 +12,11 @@ namespace HallezService.Data.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=Halez;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-3M9QK1V;Initial Catalog=Halez;Integrated Security=True");
             //optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=Halez;Integrated Security=True");
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
     }
 }

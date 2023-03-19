@@ -48,8 +48,6 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(
             "http://localhost:7227",
             "https://localhost:7227"
-            //"http://demo12.eryazsoftware.com.tr",
-            //"https://demo12.eryazsoftware.com.tr"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()

@@ -18,8 +18,7 @@ namespace HalezService
                 new Claim("Id", loginResult.Id.ToString()),
                 new Claim("NameSurname", loginResult.NameSurname.ToString()),
                 new Claim("SecurityLevel", loginResult.SecurityLevel.ToString()),
-                new Claim("CustomerId", loginResult.CustomerId.ToString()),
-                new Claim("CustomerType", loginResult.CustomerType.ToString())
+                new Claim("UserType", loginResult.UserTypes.ToString())
             };
 
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(SecretKey));
@@ -56,10 +55,10 @@ namespace HalezService
             return int.Parse(jwtSecurityToken.Claims.FirstOrDefault(r => r.Type == "Id").Value);
         }
 
-        public CustomerTypes GetUserMode(string token)
+        public UserTypes GetUserMode(string token)
         {
             ClaimsPrincipal jwtSecurityToken = DecodeToken(token: token);
-            return (CustomerTypes)Enum.Parse(typeof(CustomerTypes), jwtSecurityToken.Claims.FirstOrDefault(r => r.Type == "CustomerType").Value.ToString());
+            return (UserTypes)Enum.Parse(typeof(UserTypes), jwtSecurityToken.Claims.FirstOrDefault(r => r.Type == "UserType").Value.ToString());
         }
 
         public int GetCustomerId(string token)

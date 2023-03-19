@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HalezService.Model\HalezService.Model.csproj" />
+    <ProjectReference Include="..\HallezService.Data\HalezService.Data.csproj" />
+  </ItemGroup>
+
 </Project>

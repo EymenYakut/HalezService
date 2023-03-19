@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HalezService.Model\HalezService.Model.csproj" />
+    <ProjectReference Include="..\HalezService.Service\HalezService.Service.csproj" />
   </ItemGroup>
 
 </Project>

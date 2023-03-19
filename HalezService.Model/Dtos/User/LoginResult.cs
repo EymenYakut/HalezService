@@ -10,9 +10,8 @@ namespace HalezService.Model.Dtos.User
     public class LoginResult
     {
         public int Id { get; set; }
-        public int CustomerId { get; set; }
         public string NameSurname { get; set; }
         public string SecurityLevel { get; set; }
-        public CustomerTypes CustomerType { get; set; }
+        public UserTypes UserTypes { get; set; }
     }
 }

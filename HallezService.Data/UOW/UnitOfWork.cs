@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HallezService.Data.UOW
 {
-    public class UnitOfWork
+    public class UnitOfWork:IUnitOfWork
     {
         private IDbContextTransaction _transaction;
         private readonly DataContext _dataContext;
@@ -45,9 +45,12 @@ namespace HallezService.Data.UOW
 
         #region Private
         private IGenericRepository<User> _users { get; set; }
+        private IGenericRepository<ProductCategory> _productCategories { get; set; }
         #endregion
 
-        public IGenericRepository<User> Customers => _users ?? new GenericRepository<User>(_dataContext);
+        public IGenericRepository<User> Users => _users ?? new GenericRepository<User>(_dataContext);
+        public IGenericRepository<ProductCategory> ProductCategories => _productCategories ?? new GenericRepository<ProductCategory>(_dataContext);
+
 
     }
 }

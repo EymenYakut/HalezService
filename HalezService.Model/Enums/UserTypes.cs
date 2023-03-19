@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace HalezService.Model.Enums
 {
-    public enum CustomerTypes
+    public enum UserTypes
     {
         Admin,
-        User
+        Customer
+
     }
 }
